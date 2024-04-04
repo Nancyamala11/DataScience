@@ -12,7 +12,7 @@ app = Flask(__name__,)
 CORS(app)
 secret_key = secrets.token_hex(16)
 app.secret_key = secret_key
-client = OpenAI(api_key='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')
+client = OpenAI(api_key='your openAI API key')
 
 @app.route('/')
 def index():
