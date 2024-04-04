@@ -1,0 +1,240 @@
+
+body {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.bg-info {
+  background-color: #d34f00 !important;
+  border-radius: 10px 10px 0 0;
+}
+
+.bg-info1 {
+  background-color: #20224F !important;
+  color:#fff;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.bg-image {
+  background-image: url('/static/logo-watermark.png');
+  background-size: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  --bs-bg-opacity: .2;
+}
+
+.btn-primary {
+  padding: 15px 20px;
+  border: none;
+  background: #D34F00 !important;
+  font-weight: 500;
+  font-size: 15px;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  background: #20224F !important;
+  color: #fff;
+}
+
+.chat-icon {
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+}
+
+.chat-widget {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 400px;
+  display: none;
+  border-radius: 15px;
+}
+
+#chat-container {
+  border-radius: 15px;
+  border-color: #1e2150;
+  background-color: #fff;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+#chat-header {
+  text-align: center;
+  background-color: #20224F !important;
+  top: 35px;
+  border-radius: 0 0 0 0;
+}
+
+#chat-output {
+   height: 400px;
+   overflow-y: scroll;
+  /* margin-bottom: 10px; */
+}
+
+
+#chat-output::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+
+#chat-output::-webkit-scrollbar-thumb {
+  background-color: #d34f00;
+  border-radius: 5px;
+}
+
+/* On hover, make the scrollbar thumb darker */
+#chat-output::-webkit-scrollbar-thumb:hover {
+  background-color: #1e2150;
+}
+
+/* #user-input {
+  width: 350px;
+  padding: 5px;
+  margin-right: 5px;
+} */
+
+#send-btn {
+  width: 60px;
+  padding: 5px;
+}
+
+
+#minimize-btn {
+  /* position: absolute; */
+  /* right: 17px; */
+  cursor: pointer;
+  /* top:16px; */
+  margin-top: -10px;
+  margin-right: -20px;
+  /* background-color: #fff;
+  color:#000; */
+}
+
+
+.align-items-center {
+    align-items : center;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/* Style for chat messages sent by the user */
+#user-msg {
+    background-color: #d34f00; 
+    background-size: auto;
+    color: #fff; 
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px; 
+    margin-bottom: 10px; 
+}
+
+/* Style for chat messages sent by the bot */
+#bot-msg {
+    background-color: #1e2150; 
+    color: #fff; 
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px; 
+    margin-bottom: 10px; 
+}
+
+.message {
+  /* margin-bottom: 20px; */
+  padding: 8px 12px;
+  border-radius: 8px;
+  max-width: 70%;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 14px;
+  font-weight: 400;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.break {
+  clear: both;
+}
+
+.user-message {
+  background-color: #d34f00;
+  float: right;
+  color: #fff;
+  clear: both;
+}
+
+.bot-message {
+  background-color: #f1f1f1;
+  float: left;
+  clear: both;
+}
+
+.outer-box {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.message-content {
+  flex: 1;
+}
+
+.logo {
+  background-color: #fff;
+  padding: 10px;
+  width: 60px;
+  border-radius: 20px;
+}
+
+/* Define animation for user message */
+@keyframes userMessageAnimation {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Apply animation to user message */
+.user-message-animation {
+  animation: userMessageAnimation 0.5s ease forwards;
+}
+
+/* Define animation for bot message */
+@keyframes botMessageAnimation {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Apply animation to bot message */
+.bot-message-animation {
+  animation: botMessageAnimation 0.5s ease forwards;
+}
