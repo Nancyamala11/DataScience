@@ -17,8 +17,6 @@ document.addEventListener("DOMContentLoaded",
          const userInput = document.getElementById('user-input');
          const minimizeBtn = document.getElementById('minimize-btn');
          const bookBtn = document.getElementById('book-btn');
-         const estimationBtn = document.getElementById('estimation-btn');
-         const contactBtn = document.getElementById('contact-btn');
 
          chatIcon.addEventListener('click', function ()
          {
@@ -44,18 +42,6 @@ document.addEventListener("DOMContentLoaded",
          bookBtn.addEventListener('click', function ()
          {
              sendMessage('Book Free Consultation');
-         });
-
-         estimationBtn.addEventListener('click', function ()
-         {
-             appendMessage('You : Calculate Price Estimation');
-             calculate();
-         });
-
-         contactBtn.addEventListener('click', function ()
-         {
-             appendMessage('You : Need Contact Details');
-             contactDetails();
          });
 
          function sendMessage(message)
@@ -113,37 +99,5 @@ document.addEventListener("DOMContentLoaded",
             // Auto-scroll to bottom
             chatOutput.scrollTop = chatOutput.scrollHeight;
         }
-        
-        
-        
-        function contactDetails() {
-            clearChatOutput();
-            const contactmsg = document.createElement('div');
-            contactmsg.innerHTML = "Magick : We’d Love to Hear From You<br>" +
-                "<b>Our toll-free number :</b> 1800 270 3068<br>" +
-                "<b>Mail your queries to :</b> talktous@magickhome.com<br><br>" +
-                "<b>Visit our MagickHome Showroom : </b><br>" +
-                "Door No – AA 127 to 133,<br>" +
-                "4th Avenue, Main Road,<br>" +
-                "Shanthi Colony, Anna Nagar,<br>" +
-                "Chennai, Tamil Nadu 600040."
-            chatOutput.appendChild(contactmsg);
-        }
-        
-        function calculate() {
-            clearChatOutput();
-            const cal = document.createElement('div');
-            cal.innerHTML = "Magick : For a detailed quote, Kindly click the below link. " +
-                "Our design expert will contact you." +
-                "<center><b><a href=https://www.magickhome.com/india/quick-quote target=\"_blank\">Quick-quote</a></b></center><br>"
-            chatOutput.appendChild(cal);
-        }
-        
-        function clearChatOutput() {
-            // Get all children of chatOutput except the default content div
-            const children = Array.from(chatOutput.children).filter(child => child.id !== "default-content");
-            // Remove all children except the default content div
-            children.forEach(child => child.remove());
-        }
-        
+       
     });
